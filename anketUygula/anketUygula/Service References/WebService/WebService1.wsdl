@@ -1,0 +1,2201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://service.dahafazlaoku.com/WebService1.asmx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://service.dahafazlaoku.com/WebService1.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://service.dahafazlaoku.com/WebService1.asmx">
+      <s:element name="userSorgula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Eposta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="userSorgulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userSorgulaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parola" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="loginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Adi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Soyadi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KanGrubu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parola" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IlanEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ilanSahabiId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="hastaAdiSoyadi" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="hastayasi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="hastaBilgi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hastaneil" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hastaneAd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HastaTelefon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hastaKangrubu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="uniteSayisi" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ilanSuresi" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="konum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IlanEkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IlanEkleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserGuncelle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Adi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Soyadi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parola" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserGuncelleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserGuncelleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="userGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="userGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="izinSorgula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="izinSorgulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="izinSorgulaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="izinGuncelle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="konum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="numara" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="bildirim" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="izinGuncelleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="izinGuncelleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="izinEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="izinEkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="izinEkleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ilanGetirr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ilanGetirrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ilanGetirrResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TumilanlariGetirr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="il" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TumilanlariGetirrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TumilanlariGetirrResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KonumEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="konumUlke" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="konumIl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="konumMahalle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KonumEkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="KonumEkleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hastaneGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="il" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hastaneGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hastaneGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ilanSil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ilanID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ilanSilResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ilanSilResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EpostaGonder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EpostaGonderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EpostaGonderResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailKontrolEt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailKontrolEtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmailKontrolEtResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TelefonIDEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefonID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TelefonIDEkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TelefonIDEkleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendNotification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="il" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Hastane" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendNotificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sendNotificationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendSozNotification">
+        <s:complexType />
+      </s:element>
+      <s:element name="sendSozNotificationResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="telefonGonder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="markaID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="telefonGonderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="telefonGonderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anketLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KullaniciAdi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parola" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anketLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="anketLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anketAdminLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KullaniciAdi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parola" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anketAdminLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="anketAdminLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anketWebYoneticiAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sifre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isim" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="soyisim" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="konum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anketWebYoneticiAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="anketWebYoneticiAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anketYoneticiTumListe">
+        <s:complexType />
+      </s:element>
+      <s:element name="anketYoneticiTumListeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="anketYoneticiTumListeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SoruGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SoruId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SoruGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoruGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="soruIDgonder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="soruSeviye" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="soruIDgonderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="soruIDgonderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="userSorgulaSoapIn">
+    <wsdl:part name="parameters" element="tns:userSorgula" />
+  </wsdl:message>
+  <wsdl:message name="userSorgulaSoapOut">
+    <wsdl:part name="parameters" element="tns:userSorgulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapIn">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapOut">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="AddUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IlanEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:IlanEkle" />
+  </wsdl:message>
+  <wsdl:message name="IlanEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:IlanEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserGuncelleSoapIn">
+    <wsdl:part name="parameters" element="tns:UserGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="UserGuncelleSoapOut">
+    <wsdl:part name="parameters" element="tns:UserGuncelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="userGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:userGetir" />
+  </wsdl:message>
+  <wsdl:message name="userGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:userGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="izinSorgulaSoapIn">
+    <wsdl:part name="parameters" element="tns:izinSorgula" />
+  </wsdl:message>
+  <wsdl:message name="izinSorgulaSoapOut">
+    <wsdl:part name="parameters" element="tns:izinSorgulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="izinGuncelleSoapIn">
+    <wsdl:part name="parameters" element="tns:izinGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="izinGuncelleSoapOut">
+    <wsdl:part name="parameters" element="tns:izinGuncelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="izinEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:izinEkle" />
+  </wsdl:message>
+  <wsdl:message name="izinEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:izinEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ilanGetirrSoapIn">
+    <wsdl:part name="parameters" element="tns:ilanGetirr" />
+  </wsdl:message>
+  <wsdl:message name="ilanGetirrSoapOut">
+    <wsdl:part name="parameters" element="tns:ilanGetirrResponse" />
+  </wsdl:message>
+  <wsdl:message name="TumilanlariGetirrSoapIn">
+    <wsdl:part name="parameters" element="tns:TumilanlariGetirr" />
+  </wsdl:message>
+  <wsdl:message name="TumilanlariGetirrSoapOut">
+    <wsdl:part name="parameters" element="tns:TumilanlariGetirrResponse" />
+  </wsdl:message>
+  <wsdl:message name="KonumEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:KonumEkle" />
+  </wsdl:message>
+  <wsdl:message name="KonumEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:KonumEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="hastaneGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:hastaneGetir" />
+  </wsdl:message>
+  <wsdl:message name="hastaneGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:hastaneGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="ilanSilSoapIn">
+    <wsdl:part name="parameters" element="tns:ilanSil" />
+  </wsdl:message>
+  <wsdl:message name="ilanSilSoapOut">
+    <wsdl:part name="parameters" element="tns:ilanSilResponse" />
+  </wsdl:message>
+  <wsdl:message name="EpostaGonderSoapIn">
+    <wsdl:part name="parameters" element="tns:EpostaGonder" />
+  </wsdl:message>
+  <wsdl:message name="EpostaGonderSoapOut">
+    <wsdl:part name="parameters" element="tns:EpostaGonderResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailKontrolEtSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailKontrolEt" />
+  </wsdl:message>
+  <wsdl:message name="EmailKontrolEtSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailKontrolEtResponse" />
+  </wsdl:message>
+  <wsdl:message name="TelefonIDEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:TelefonIDEkle" />
+  </wsdl:message>
+  <wsdl:message name="TelefonIDEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:TelefonIDEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendNotificationSoapIn">
+    <wsdl:part name="parameters" element="tns:sendNotification" />
+  </wsdl:message>
+  <wsdl:message name="sendNotificationSoapOut">
+    <wsdl:part name="parameters" element="tns:sendNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendSozNotificationSoapIn">
+    <wsdl:part name="parameters" element="tns:sendSozNotification" />
+  </wsdl:message>
+  <wsdl:message name="sendSozNotificationSoapOut">
+    <wsdl:part name="parameters" element="tns:sendSozNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="telefonGonderSoapIn">
+    <wsdl:part name="parameters" element="tns:telefonGonder" />
+  </wsdl:message>
+  <wsdl:message name="telefonGonderSoapOut">
+    <wsdl:part name="parameters" element="tns:telefonGonderResponse" />
+  </wsdl:message>
+  <wsdl:message name="anketLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:anketLogin" />
+  </wsdl:message>
+  <wsdl:message name="anketLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:anketLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="anketAdminLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:anketAdminLogin" />
+  </wsdl:message>
+  <wsdl:message name="anketAdminLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:anketAdminLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="anketWebYoneticiAddSoapIn">
+    <wsdl:part name="parameters" element="tns:anketWebYoneticiAdd" />
+  </wsdl:message>
+  <wsdl:message name="anketWebYoneticiAddSoapOut">
+    <wsdl:part name="parameters" element="tns:anketWebYoneticiAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="anketYoneticiTumListeSoapIn">
+    <wsdl:part name="parameters" element="tns:anketYoneticiTumListe" />
+  </wsdl:message>
+  <wsdl:message name="anketYoneticiTumListeSoapOut">
+    <wsdl:part name="parameters" element="tns:anketYoneticiTumListeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SoruGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:SoruGetir" />
+  </wsdl:message>
+  <wsdl:message name="SoruGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:SoruGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderSoapIn">
+    <wsdl:part name="parameters" element="tns:soruIDgonder" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderSoapOut">
+    <wsdl:part name="parameters" element="tns:soruIDgonderResponse" />
+  </wsdl:message>
+  <wsdl:message name="userSorgulaHttpGetIn">
+    <wsdl:part name="Eposta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="userSorgulaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="loginHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="loginHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AddUserHttpGetIn">
+    <wsdl:part name="Adi" type="s:string" />
+    <wsdl:part name="Soyadi" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="KanGrubu" type="s:string" />
+    <wsdl:part name="Telefon" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="IlanEkleHttpGetIn">
+    <wsdl:part name="ilanSahabiId" type="s:string" />
+    <wsdl:part name="hastaAdiSoyadi" type="s:string" />
+    <wsdl:part name="hastayasi" type="s:string" />
+    <wsdl:part name="hastaBilgi" type="s:string" />
+    <wsdl:part name="hastaneil" type="s:string" />
+    <wsdl:part name="hastaneAd" type="s:string" />
+    <wsdl:part name="HastaTelefon" type="s:string" />
+    <wsdl:part name="hastaKangrubu" type="s:string" />
+    <wsdl:part name="uniteSayisi" type="s:string" />
+    <wsdl:part name="ilanSuresi" type="s:string" />
+    <wsdl:part name="konum" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IlanEkleHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UserGuncelleHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="Adi" type="s:string" />
+    <wsdl:part name="Soyadi" type="s:string" />
+    <wsdl:part name="Telefon" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserGuncelleHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="userGetirHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="userGetirHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="izinSorgulaHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="izinSorgulaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="izinGuncelleHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="konum" type="s:string" />
+    <wsdl:part name="numara" type="s:string" />
+    <wsdl:part name="bildirim" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="izinGuncelleHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="izinEkleHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="izinEkleHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ilanGetirrHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ilanGetirrHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TumilanlariGetirrHttpGetIn">
+    <wsdl:part name="il" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TumilanlariGetirrHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="KonumEkleHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="konumUlke" type="s:string" />
+    <wsdl:part name="konumIl" type="s:string" />
+    <wsdl:part name="konumMahalle" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="KonumEkleHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="hastaneGetirHttpGetIn">
+    <wsdl:part name="il" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="hastaneGetirHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ilanSilHttpGetIn">
+    <wsdl:part name="ilanID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ilanSilHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="EpostaGonderHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EpostaGonderHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="EmailKontrolEtHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EmailKontrolEtHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="TelefonIDEkleHttpGetIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="telefonID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TelefonIDEkleHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="sendNotificationHttpGetIn">
+    <wsdl:part name="il" type="s:string" />
+    <wsdl:part name="Hastane" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="sendNotificationHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="sendSozNotificationHttpGetIn" />
+  <wsdl:message name="sendSozNotificationHttpGetOut" />
+  <wsdl:message name="telefonGonderHttpGetIn">
+    <wsdl:part name="markaID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="telefonGonderHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="anketLoginHttpGetIn">
+    <wsdl:part name="KullaniciAdi" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="anketAdminLoginHttpGetIn">
+    <wsdl:part name="KullaniciAdi" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketAdminLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="anketWebYoneticiAddHttpGetIn">
+    <wsdl:part name="tc" type="s:string" />
+    <wsdl:part name="sifre" type="s:string" />
+    <wsdl:part name="isim" type="s:string" />
+    <wsdl:part name="soyisim" type="s:string" />
+    <wsdl:part name="telefon" type="s:string" />
+    <wsdl:part name="mail" type="s:string" />
+    <wsdl:part name="konum" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketWebYoneticiAddHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="anketYoneticiTumListeHttpGetIn" />
+  <wsdl:message name="anketYoneticiTumListeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SoruGetirHttpGetIn">
+    <wsdl:part name="SoruId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SoruGetirHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderHttpGetIn">
+    <wsdl:part name="soruSeviye" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="userSorgulaHttpPostIn">
+    <wsdl:part name="Eposta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="userSorgulaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="loginHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="loginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AddUserHttpPostIn">
+    <wsdl:part name="Adi" type="s:string" />
+    <wsdl:part name="Soyadi" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="KanGrubu" type="s:string" />
+    <wsdl:part name="Telefon" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="IlanEkleHttpPostIn">
+    <wsdl:part name="ilanSahabiId" type="s:string" />
+    <wsdl:part name="hastaAdiSoyadi" type="s:string" />
+    <wsdl:part name="hastayasi" type="s:string" />
+    <wsdl:part name="hastaBilgi" type="s:string" />
+    <wsdl:part name="hastaneil" type="s:string" />
+    <wsdl:part name="hastaneAd" type="s:string" />
+    <wsdl:part name="HastaTelefon" type="s:string" />
+    <wsdl:part name="hastaKangrubu" type="s:string" />
+    <wsdl:part name="uniteSayisi" type="s:string" />
+    <wsdl:part name="ilanSuresi" type="s:string" />
+    <wsdl:part name="konum" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IlanEkleHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UserGuncelleHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="Adi" type="s:string" />
+    <wsdl:part name="Soyadi" type="s:string" />
+    <wsdl:part name="Telefon" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UserGuncelleHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="userGetirHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="userGetirHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="izinSorgulaHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="izinSorgulaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="izinGuncelleHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="konum" type="s:string" />
+    <wsdl:part name="numara" type="s:string" />
+    <wsdl:part name="bildirim" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="izinGuncelleHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="izinEkleHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="izinEkleHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ilanGetirrHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ilanGetirrHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TumilanlariGetirrHttpPostIn">
+    <wsdl:part name="il" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TumilanlariGetirrHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="KonumEkleHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="konumUlke" type="s:string" />
+    <wsdl:part name="konumIl" type="s:string" />
+    <wsdl:part name="konumMahalle" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="KonumEkleHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="hastaneGetirHttpPostIn">
+    <wsdl:part name="il" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="hastaneGetirHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ilanSilHttpPostIn">
+    <wsdl:part name="ilanID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ilanSilHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="EpostaGonderHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EpostaGonderHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="EmailKontrolEtHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EmailKontrolEtHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="TelefonIDEkleHttpPostIn">
+    <wsdl:part name="UserId" type="s:string" />
+    <wsdl:part name="telefonID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TelefonIDEkleHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="sendNotificationHttpPostIn">
+    <wsdl:part name="il" type="s:string" />
+    <wsdl:part name="Hastane" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="sendNotificationHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="sendSozNotificationHttpPostIn" />
+  <wsdl:message name="sendSozNotificationHttpPostOut" />
+  <wsdl:message name="telefonGonderHttpPostIn">
+    <wsdl:part name="markaID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="telefonGonderHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="anketLoginHttpPostIn">
+    <wsdl:part name="KullaniciAdi" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="anketAdminLoginHttpPostIn">
+    <wsdl:part name="KullaniciAdi" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketAdminLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="anketWebYoneticiAddHttpPostIn">
+    <wsdl:part name="tc" type="s:string" />
+    <wsdl:part name="sifre" type="s:string" />
+    <wsdl:part name="isim" type="s:string" />
+    <wsdl:part name="soyisim" type="s:string" />
+    <wsdl:part name="telefon" type="s:string" />
+    <wsdl:part name="mail" type="s:string" />
+    <wsdl:part name="konum" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketWebYoneticiAddHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="anketYoneticiTumListeHttpPostIn" />
+  <wsdl:message name="anketYoneticiTumListeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SoruGetirHttpPostIn">
+    <wsdl:part name="SoruId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SoruGetirHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderHttpPostIn">
+    <wsdl:part name="soruSeviye" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="userSorgula">
+      <wsdl:input message="tns:userSorgulaSoapIn" />
+      <wsdl:output message="tns:userSorgulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginSoapIn" />
+      <wsdl:output message="tns:loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input message="tns:AddUserSoapIn" />
+      <wsdl:output message="tns:AddUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IlanEkle">
+      <wsdl:input message="tns:IlanEkleSoapIn" />
+      <wsdl:output message="tns:IlanEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGuncelle">
+      <wsdl:input message="tns:UserGuncelleSoapIn" />
+      <wsdl:output message="tns:UserGuncelleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="userGetir">
+      <wsdl:input message="tns:userGetirSoapIn" />
+      <wsdl:output message="tns:userGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="izinSorgula">
+      <wsdl:input message="tns:izinSorgulaSoapIn" />
+      <wsdl:output message="tns:izinSorgulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="izinGuncelle">
+      <wsdl:input message="tns:izinGuncelleSoapIn" />
+      <wsdl:output message="tns:izinGuncelleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="izinEkle">
+      <wsdl:input message="tns:izinEkleSoapIn" />
+      <wsdl:output message="tns:izinEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ilanGetirr">
+      <wsdl:input message="tns:ilanGetirrSoapIn" />
+      <wsdl:output message="tns:ilanGetirrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TumilanlariGetirr">
+      <wsdl:input message="tns:TumilanlariGetirrSoapIn" />
+      <wsdl:output message="tns:TumilanlariGetirrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KonumEkle">
+      <wsdl:input message="tns:KonumEkleSoapIn" />
+      <wsdl:output message="tns:KonumEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hastaneGetir">
+      <wsdl:input message="tns:hastaneGetirSoapIn" />
+      <wsdl:output message="tns:hastaneGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ilanSil">
+      <wsdl:input message="tns:ilanSilSoapIn" />
+      <wsdl:output message="tns:ilanSilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EpostaGonder">
+      <wsdl:input message="tns:EpostaGonderSoapIn" />
+      <wsdl:output message="tns:EpostaGonderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailKontrolEt">
+      <wsdl:input message="tns:EmailKontrolEtSoapIn" />
+      <wsdl:output message="tns:EmailKontrolEtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TelefonIDEkle">
+      <wsdl:input message="tns:TelefonIDEkleSoapIn" />
+      <wsdl:output message="tns:TelefonIDEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendNotification">
+      <wsdl:input message="tns:sendNotificationSoapIn" />
+      <wsdl:output message="tns:sendNotificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendSozNotification">
+      <wsdl:input message="tns:sendSozNotificationSoapIn" />
+      <wsdl:output message="tns:sendSozNotificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="telefonGonder">
+      <wsdl:input message="tns:telefonGonderSoapIn" />
+      <wsdl:output message="tns:telefonGonderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketLogin">
+      <wsdl:input message="tns:anketLoginSoapIn" />
+      <wsdl:output message="tns:anketLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketAdminLogin">
+      <wsdl:input message="tns:anketAdminLoginSoapIn" />
+      <wsdl:output message="tns:anketAdminLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketWebYoneticiAdd">
+      <wsdl:input message="tns:anketWebYoneticiAddSoapIn" />
+      <wsdl:output message="tns:anketWebYoneticiAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketYoneticiTumListe">
+      <wsdl:input message="tns:anketYoneticiTumListeSoapIn" />
+      <wsdl:output message="tns:anketYoneticiTumListeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SoruGetir">
+      <wsdl:input message="tns:SoruGetirSoapIn" />
+      <wsdl:output message="tns:SoruGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonder">
+      <wsdl:input message="tns:soruIDgonderSoapIn" />
+      <wsdl:output message="tns:soruIDgonderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService1HttpGet">
+    <wsdl:operation name="userSorgula">
+      <wsdl:input message="tns:userSorgulaHttpGetIn" />
+      <wsdl:output message="tns:userSorgulaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginHttpGetIn" />
+      <wsdl:output message="tns:loginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input message="tns:AddUserHttpGetIn" />
+      <wsdl:output message="tns:AddUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IlanEkle">
+      <wsdl:input message="tns:IlanEkleHttpGetIn" />
+      <wsdl:output message="tns:IlanEkleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGuncelle">
+      <wsdl:input message="tns:UserGuncelleHttpGetIn" />
+      <wsdl:output message="tns:UserGuncelleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="userGetir">
+      <wsdl:input message="tns:userGetirHttpGetIn" />
+      <wsdl:output message="tns:userGetirHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="izinSorgula">
+      <wsdl:input message="tns:izinSorgulaHttpGetIn" />
+      <wsdl:output message="tns:izinSorgulaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="izinGuncelle">
+      <wsdl:input message="tns:izinGuncelleHttpGetIn" />
+      <wsdl:output message="tns:izinGuncelleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="izinEkle">
+      <wsdl:input message="tns:izinEkleHttpGetIn" />
+      <wsdl:output message="tns:izinEkleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ilanGetirr">
+      <wsdl:input message="tns:ilanGetirrHttpGetIn" />
+      <wsdl:output message="tns:ilanGetirrHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TumilanlariGetirr">
+      <wsdl:input message="tns:TumilanlariGetirrHttpGetIn" />
+      <wsdl:output message="tns:TumilanlariGetirrHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KonumEkle">
+      <wsdl:input message="tns:KonumEkleHttpGetIn" />
+      <wsdl:output message="tns:KonumEkleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hastaneGetir">
+      <wsdl:input message="tns:hastaneGetirHttpGetIn" />
+      <wsdl:output message="tns:hastaneGetirHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ilanSil">
+      <wsdl:input message="tns:ilanSilHttpGetIn" />
+      <wsdl:output message="tns:ilanSilHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EpostaGonder">
+      <wsdl:input message="tns:EpostaGonderHttpGetIn" />
+      <wsdl:output message="tns:EpostaGonderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailKontrolEt">
+      <wsdl:input message="tns:EmailKontrolEtHttpGetIn" />
+      <wsdl:output message="tns:EmailKontrolEtHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TelefonIDEkle">
+      <wsdl:input message="tns:TelefonIDEkleHttpGetIn" />
+      <wsdl:output message="tns:TelefonIDEkleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendNotification">
+      <wsdl:input message="tns:sendNotificationHttpGetIn" />
+      <wsdl:output message="tns:sendNotificationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendSozNotification">
+      <wsdl:input message="tns:sendSozNotificationHttpGetIn" />
+      <wsdl:output message="tns:sendSozNotificationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="telefonGonder">
+      <wsdl:input message="tns:telefonGonderHttpGetIn" />
+      <wsdl:output message="tns:telefonGonderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketLogin">
+      <wsdl:input message="tns:anketLoginHttpGetIn" />
+      <wsdl:output message="tns:anketLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketAdminLogin">
+      <wsdl:input message="tns:anketAdminLoginHttpGetIn" />
+      <wsdl:output message="tns:anketAdminLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketWebYoneticiAdd">
+      <wsdl:input message="tns:anketWebYoneticiAddHttpGetIn" />
+      <wsdl:output message="tns:anketWebYoneticiAddHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketYoneticiTumListe">
+      <wsdl:input message="tns:anketYoneticiTumListeHttpGetIn" />
+      <wsdl:output message="tns:anketYoneticiTumListeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SoruGetir">
+      <wsdl:input message="tns:SoruGetirHttpGetIn" />
+      <wsdl:output message="tns:SoruGetirHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonder">
+      <wsdl:input message="tns:soruIDgonderHttpGetIn" />
+      <wsdl:output message="tns:soruIDgonderHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService1HttpPost">
+    <wsdl:operation name="userSorgula">
+      <wsdl:input message="tns:userSorgulaHttpPostIn" />
+      <wsdl:output message="tns:userSorgulaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginHttpPostIn" />
+      <wsdl:output message="tns:loginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input message="tns:AddUserHttpPostIn" />
+      <wsdl:output message="tns:AddUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IlanEkle">
+      <wsdl:input message="tns:IlanEkleHttpPostIn" />
+      <wsdl:output message="tns:IlanEkleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGuncelle">
+      <wsdl:input message="tns:UserGuncelleHttpPostIn" />
+      <wsdl:output message="tns:UserGuncelleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="userGetir">
+      <wsdl:input message="tns:userGetirHttpPostIn" />
+      <wsdl:output message="tns:userGetirHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="izinSorgula">
+      <wsdl:input message="tns:izinSorgulaHttpPostIn" />
+      <wsdl:output message="tns:izinSorgulaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="izinGuncelle">
+      <wsdl:input message="tns:izinGuncelleHttpPostIn" />
+      <wsdl:output message="tns:izinGuncelleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="izinEkle">
+      <wsdl:input message="tns:izinEkleHttpPostIn" />
+      <wsdl:output message="tns:izinEkleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ilanGetirr">
+      <wsdl:input message="tns:ilanGetirrHttpPostIn" />
+      <wsdl:output message="tns:ilanGetirrHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TumilanlariGetirr">
+      <wsdl:input message="tns:TumilanlariGetirrHttpPostIn" />
+      <wsdl:output message="tns:TumilanlariGetirrHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KonumEkle">
+      <wsdl:input message="tns:KonumEkleHttpPostIn" />
+      <wsdl:output message="tns:KonumEkleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hastaneGetir">
+      <wsdl:input message="tns:hastaneGetirHttpPostIn" />
+      <wsdl:output message="tns:hastaneGetirHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ilanSil">
+      <wsdl:input message="tns:ilanSilHttpPostIn" />
+      <wsdl:output message="tns:ilanSilHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EpostaGonder">
+      <wsdl:input message="tns:EpostaGonderHttpPostIn" />
+      <wsdl:output message="tns:EpostaGonderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailKontrolEt">
+      <wsdl:input message="tns:EmailKontrolEtHttpPostIn" />
+      <wsdl:output message="tns:EmailKontrolEtHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TelefonIDEkle">
+      <wsdl:input message="tns:TelefonIDEkleHttpPostIn" />
+      <wsdl:output message="tns:TelefonIDEkleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendNotification">
+      <wsdl:input message="tns:sendNotificationHttpPostIn" />
+      <wsdl:output message="tns:sendNotificationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendSozNotification">
+      <wsdl:input message="tns:sendSozNotificationHttpPostIn" />
+      <wsdl:output message="tns:sendSozNotificationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="telefonGonder">
+      <wsdl:input message="tns:telefonGonderHttpPostIn" />
+      <wsdl:output message="tns:telefonGonderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketLogin">
+      <wsdl:input message="tns:anketLoginHttpPostIn" />
+      <wsdl:output message="tns:anketLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketAdminLogin">
+      <wsdl:input message="tns:anketAdminLoginHttpPostIn" />
+      <wsdl:output message="tns:anketAdminLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketWebYoneticiAdd">
+      <wsdl:input message="tns:anketWebYoneticiAddHttpPostIn" />
+      <wsdl:output message="tns:anketWebYoneticiAddHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketYoneticiTumListe">
+      <wsdl:input message="tns:anketYoneticiTumListeHttpPostIn" />
+      <wsdl:output message="tns:anketYoneticiTumListeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SoruGetir">
+      <wsdl:input message="tns:SoruGetirHttpPostIn" />
+      <wsdl:output message="tns:SoruGetirHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonder">
+      <wsdl:input message="tns:soruIDgonderHttpPostIn" />
+      <wsdl:output message="tns:soruIDgonderHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="userSorgula">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/userSorgula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlanEkle">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/IlanEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGuncelle">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/UserGuncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userGetir">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/userGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinSorgula">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/izinSorgula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinGuncelle">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/izinGuncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinEkle">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/izinEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ilanGetirr">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/ilanGetirr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TumilanlariGetirr">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/TumilanlariGetirr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KonumEkle">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/KonumEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hastaneGetir">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/hastaneGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ilanSil">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/ilanSil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EpostaGonder">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/EpostaGonder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailKontrolEt">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/EmailKontrolEt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TelefonIDEkle">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/TelefonIDEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendNotification">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/sendNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSozNotification">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/sendSozNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="telefonGonder">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/telefonGonder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketLogin">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketAdminLogin">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketAdminLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketWebYoneticiAdd">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketWebYoneticiAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketYoneticiTumListe">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketYoneticiTumListe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SoruGetir">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/SoruGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonder">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/soruIDgonder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="userSorgula">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/userSorgula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/AddUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlanEkle">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/IlanEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGuncelle">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/UserGuncelle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userGetir">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/userGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinSorgula">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/izinSorgula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinGuncelle">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/izinGuncelle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinEkle">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/izinEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ilanGetirr">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/ilanGetirr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TumilanlariGetirr">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/TumilanlariGetirr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KonumEkle">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/KonumEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hastaneGetir">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/hastaneGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ilanSil">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/ilanSil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EpostaGonder">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/EpostaGonder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailKontrolEt">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/EmailKontrolEt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TelefonIDEkle">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/TelefonIDEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendNotification">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/sendNotification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSozNotification">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/sendSozNotification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="telefonGonder">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/telefonGonder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketLogin">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketAdminLogin">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketAdminLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketWebYoneticiAdd">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketWebYoneticiAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketYoneticiTumListe">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketYoneticiTumListe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SoruGetir">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/SoruGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonder">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/soruIDgonder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1HttpGet" type="tns:WebService1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="userSorgula">
+      <http:operation location="/userSorgula" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <http:operation location="/login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <http:operation location="/AddUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlanEkle">
+      <http:operation location="/IlanEkle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGuncelle">
+      <http:operation location="/UserGuncelle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userGetir">
+      <http:operation location="/userGetir" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinSorgula">
+      <http:operation location="/izinSorgula" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinGuncelle">
+      <http:operation location="/izinGuncelle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinEkle">
+      <http:operation location="/izinEkle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ilanGetirr">
+      <http:operation location="/ilanGetirr" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TumilanlariGetirr">
+      <http:operation location="/TumilanlariGetirr" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KonumEkle">
+      <http:operation location="/KonumEkle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hastaneGetir">
+      <http:operation location="/hastaneGetir" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ilanSil">
+      <http:operation location="/ilanSil" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EpostaGonder">
+      <http:operation location="/EpostaGonder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailKontrolEt">
+      <http:operation location="/EmailKontrolEt" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TelefonIDEkle">
+      <http:operation location="/TelefonIDEkle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendNotification">
+      <http:operation location="/sendNotification" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSozNotification">
+      <http:operation location="/sendSozNotification" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="telefonGonder">
+      <http:operation location="/telefonGonder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketLogin">
+      <http:operation location="/anketLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketAdminLogin">
+      <http:operation location="/anketAdminLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketWebYoneticiAdd">
+      <http:operation location="/anketWebYoneticiAdd" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketYoneticiTumListe">
+      <http:operation location="/anketYoneticiTumListe" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SoruGetir">
+      <http:operation location="/SoruGetir" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonder">
+      <http:operation location="/soruIDgonder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1HttpPost" type="tns:WebService1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="userSorgula">
+      <http:operation location="/userSorgula" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <http:operation location="/login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <http:operation location="/AddUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlanEkle">
+      <http:operation location="/IlanEkle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGuncelle">
+      <http:operation location="/UserGuncelle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userGetir">
+      <http:operation location="/userGetir" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinSorgula">
+      <http:operation location="/izinSorgula" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinGuncelle">
+      <http:operation location="/izinGuncelle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="izinEkle">
+      <http:operation location="/izinEkle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ilanGetirr">
+      <http:operation location="/ilanGetirr" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TumilanlariGetirr">
+      <http:operation location="/TumilanlariGetirr" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KonumEkle">
+      <http:operation location="/KonumEkle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hastaneGetir">
+      <http:operation location="/hastaneGetir" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ilanSil">
+      <http:operation location="/ilanSil" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EpostaGonder">
+      <http:operation location="/EpostaGonder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailKontrolEt">
+      <http:operation location="/EmailKontrolEt" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TelefonIDEkle">
+      <http:operation location="/TelefonIDEkle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendNotification">
+      <http:operation location="/sendNotification" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSozNotification">
+      <http:operation location="/sendSozNotification" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="telefonGonder">
+      <http:operation location="/telefonGonder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketLogin">
+      <http:operation location="/anketLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketAdminLogin">
+      <http:operation location="/anketAdminLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketWebYoneticiAdd">
+      <http:operation location="/anketWebYoneticiAdd" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketYoneticiTumListe">
+      <http:operation location="/anketYoneticiTumListe" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SoruGetir">
+      <http:operation location="/SoruGetir" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonder">
+      <http:operation location="/soruIDgonder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://service.dahafazlaoku.com/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://service.dahafazlaoku.com/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1HttpGet" binding="tns:WebService1HttpGet">
+      <http:address location="http://service.dahafazlaoku.com/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1HttpPost" binding="tns:WebService1HttpPost">
+      <http:address location="http://service.dahafazlaoku.com/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
