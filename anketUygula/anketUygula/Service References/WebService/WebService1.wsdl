@@ -362,6 +362,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="yoneticisil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="yoneticiID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="yoneticisilResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="yoneticisilResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="SoruGetir">
         <s:complexType>
           <s:sequence>
@@ -387,6 +401,124 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="soruIDgonderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="soruIDgonderUcSeviye">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="soruSeviye" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="soruIDgonderUcSeviyeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="soruIDgonderUcSeviyeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="usurAddFitatingo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Adi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Soyadi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parola" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="usurAddFitatingoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="usurAddFitatingoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mailKontrolEt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mailKontrolEtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mailKontrolEtResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="firatIngoLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parola" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="firatIngoLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="firatIngoLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="firatIngoUserIDGonder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Eposta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="firatIngoUserIDGonderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="firatIngoUserIDGonderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="firatIngoUserSeviyeGonder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usurID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="firatIngoUserSeviyeGonderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="firatIngoUserSeviyeGonderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="firatIngoUserSeviyeGuncelle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="seviye" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="firatIngoUserSeviyeGuncelleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="firatIngoUserSeviyeGuncelleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FitatingoYanlisCevapEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="user_ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="soru_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FitatingoYanlisCevapEkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FitatingoYanlisCevapEkleResult" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -538,6 +670,12 @@
   <wsdl:message name="anketYoneticiTumListeSoapOut">
     <wsdl:part name="parameters" element="tns:anketYoneticiTumListeResponse" />
   </wsdl:message>
+  <wsdl:message name="yoneticisilSoapIn">
+    <wsdl:part name="parameters" element="tns:yoneticisil" />
+  </wsdl:message>
+  <wsdl:message name="yoneticisilSoapOut">
+    <wsdl:part name="parameters" element="tns:yoneticisilResponse" />
+  </wsdl:message>
   <wsdl:message name="SoruGetirSoapIn">
     <wsdl:part name="parameters" element="tns:SoruGetir" />
   </wsdl:message>
@@ -549,6 +687,54 @@
   </wsdl:message>
   <wsdl:message name="soruIDgonderSoapOut">
     <wsdl:part name="parameters" element="tns:soruIDgonderResponse" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderUcSeviyeSoapIn">
+    <wsdl:part name="parameters" element="tns:soruIDgonderUcSeviye" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderUcSeviyeSoapOut">
+    <wsdl:part name="parameters" element="tns:soruIDgonderUcSeviyeResponse" />
+  </wsdl:message>
+  <wsdl:message name="usurAddFitatingoSoapIn">
+    <wsdl:part name="parameters" element="tns:usurAddFitatingo" />
+  </wsdl:message>
+  <wsdl:message name="usurAddFitatingoSoapOut">
+    <wsdl:part name="parameters" element="tns:usurAddFitatingoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mailKontrolEtSoapIn">
+    <wsdl:part name="parameters" element="tns:mailKontrolEt" />
+  </wsdl:message>
+  <wsdl:message name="mailKontrolEtSoapOut">
+    <wsdl:part name="parameters" element="tns:mailKontrolEtResponse" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:firatIngoLogin" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:firatIngoLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserIDGonderSoapIn">
+    <wsdl:part name="parameters" element="tns:firatIngoUserIDGonder" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserIDGonderSoapOut">
+    <wsdl:part name="parameters" element="tns:firatIngoUserIDGonderResponse" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGonderSoapIn">
+    <wsdl:part name="parameters" element="tns:firatIngoUserSeviyeGonder" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGonderSoapOut">
+    <wsdl:part name="parameters" element="tns:firatIngoUserSeviyeGonderResponse" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGuncelleSoapIn">
+    <wsdl:part name="parameters" element="tns:firatIngoUserSeviyeGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGuncelleSoapOut">
+    <wsdl:part name="parameters" element="tns:firatIngoUserSeviyeGuncelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoYanlisCevapEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:FitatingoYanlisCevapEkle" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoYanlisCevapEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:FitatingoYanlisCevapEkleResponse" />
   </wsdl:message>
   <wsdl:message name="userSorgulaHttpGetIn">
     <wsdl:part name="Eposta" type="s:string" />
@@ -724,6 +910,12 @@
   <wsdl:message name="anketYoneticiTumListeHttpGetOut">
     <wsdl:part name="Body" element="tns:string" />
   </wsdl:message>
+  <wsdl:message name="yoneticisilHttpGetIn">
+    <wsdl:part name="yoneticiID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="yoneticisilHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
   <wsdl:message name="SoruGetirHttpGetIn">
     <wsdl:part name="SoruId" type="s:string" />
   </wsdl:message>
@@ -735,6 +927,60 @@
   </wsdl:message>
   <wsdl:message name="soruIDgonderHttpGetOut">
     <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderUcSeviyeHttpGetIn">
+    <wsdl:part name="soruSeviye" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderUcSeviyeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="usurAddFitatingoHttpGetIn">
+    <wsdl:part name="Adi" type="s:string" />
+    <wsdl:part name="Soyadi" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="usurAddFitatingoHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="mailKontrolEtHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mailKontrolEtHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoLoginHttpGetIn">
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserIDGonderHttpGetIn">
+    <wsdl:part name="Eposta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserIDGonderHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGonderHttpGetIn">
+    <wsdl:part name="usurID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGonderHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGuncelleHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="seviye" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGuncelleHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoYanlisCevapEkleHttpGetIn">
+    <wsdl:part name="user_ID" type="s:string" />
+    <wsdl:part name="soru_ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoYanlisCevapEkleHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
   <wsdl:message name="userSorgulaHttpPostIn">
     <wsdl:part name="Eposta" type="s:string" />
@@ -910,6 +1156,12 @@
   <wsdl:message name="anketYoneticiTumListeHttpPostOut">
     <wsdl:part name="Body" element="tns:string" />
   </wsdl:message>
+  <wsdl:message name="yoneticisilHttpPostIn">
+    <wsdl:part name="yoneticiID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="yoneticisilHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
   <wsdl:message name="SoruGetirHttpPostIn">
     <wsdl:part name="SoruId" type="s:string" />
   </wsdl:message>
@@ -921,6 +1173,60 @@
   </wsdl:message>
   <wsdl:message name="soruIDgonderHttpPostOut">
     <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderUcSeviyeHttpPostIn">
+    <wsdl:part name="soruSeviye" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="soruIDgonderUcSeviyeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="usurAddFitatingoHttpPostIn">
+    <wsdl:part name="Adi" type="s:string" />
+    <wsdl:part name="Soyadi" type="s:string" />
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="usurAddFitatingoHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="mailKontrolEtHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mailKontrolEtHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoLoginHttpPostIn">
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserIDGonderHttpPostIn">
+    <wsdl:part name="Eposta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserIDGonderHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGonderHttpPostIn">
+    <wsdl:part name="usurID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGonderHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGuncelleHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="seviye" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="firatIngoUserSeviyeGuncelleHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoYanlisCevapEkleHttpPostIn">
+    <wsdl:part name="user_ID" type="s:string" />
+    <wsdl:part name="soru_ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoYanlisCevapEkleHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
   <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="userSorgula">
@@ -1019,6 +1325,10 @@
       <wsdl:input message="tns:anketYoneticiTumListeSoapIn" />
       <wsdl:output message="tns:anketYoneticiTumListeSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="yoneticisil">
+      <wsdl:input message="tns:yoneticisilSoapIn" />
+      <wsdl:output message="tns:yoneticisilSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="SoruGetir">
       <wsdl:input message="tns:SoruGetirSoapIn" />
       <wsdl:output message="tns:SoruGetirSoapOut" />
@@ -1026,6 +1336,38 @@
     <wsdl:operation name="soruIDgonder">
       <wsdl:input message="tns:soruIDgonderSoapIn" />
       <wsdl:output message="tns:soruIDgonderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonderUcSeviye">
+      <wsdl:input message="tns:soruIDgonderUcSeviyeSoapIn" />
+      <wsdl:output message="tns:soruIDgonderUcSeviyeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="usurAddFitatingo">
+      <wsdl:input message="tns:usurAddFitatingoSoapIn" />
+      <wsdl:output message="tns:usurAddFitatingoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mailKontrolEt">
+      <wsdl:input message="tns:mailKontrolEtSoapIn" />
+      <wsdl:output message="tns:mailKontrolEtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoLogin">
+      <wsdl:input message="tns:firatIngoLoginSoapIn" />
+      <wsdl:output message="tns:firatIngoLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserIDGonder">
+      <wsdl:input message="tns:firatIngoUserIDGonderSoapIn" />
+      <wsdl:output message="tns:firatIngoUserIDGonderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGonder">
+      <wsdl:input message="tns:firatIngoUserSeviyeGonderSoapIn" />
+      <wsdl:output message="tns:firatIngoUserSeviyeGonderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGuncelle">
+      <wsdl:input message="tns:firatIngoUserSeviyeGuncelleSoapIn" />
+      <wsdl:output message="tns:firatIngoUserSeviyeGuncelleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoYanlisCevapEkle">
+      <wsdl:input message="tns:FitatingoYanlisCevapEkleSoapIn" />
+      <wsdl:output message="tns:FitatingoYanlisCevapEkleSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="WebService1HttpGet">
@@ -1125,6 +1467,10 @@
       <wsdl:input message="tns:anketYoneticiTumListeHttpGetIn" />
       <wsdl:output message="tns:anketYoneticiTumListeHttpGetOut" />
     </wsdl:operation>
+    <wsdl:operation name="yoneticisil">
+      <wsdl:input message="tns:yoneticisilHttpGetIn" />
+      <wsdl:output message="tns:yoneticisilHttpGetOut" />
+    </wsdl:operation>
     <wsdl:operation name="SoruGetir">
       <wsdl:input message="tns:SoruGetirHttpGetIn" />
       <wsdl:output message="tns:SoruGetirHttpGetOut" />
@@ -1132,6 +1478,38 @@
     <wsdl:operation name="soruIDgonder">
       <wsdl:input message="tns:soruIDgonderHttpGetIn" />
       <wsdl:output message="tns:soruIDgonderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonderUcSeviye">
+      <wsdl:input message="tns:soruIDgonderUcSeviyeHttpGetIn" />
+      <wsdl:output message="tns:soruIDgonderUcSeviyeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="usurAddFitatingo">
+      <wsdl:input message="tns:usurAddFitatingoHttpGetIn" />
+      <wsdl:output message="tns:usurAddFitatingoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mailKontrolEt">
+      <wsdl:input message="tns:mailKontrolEtHttpGetIn" />
+      <wsdl:output message="tns:mailKontrolEtHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoLogin">
+      <wsdl:input message="tns:firatIngoLoginHttpGetIn" />
+      <wsdl:output message="tns:firatIngoLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserIDGonder">
+      <wsdl:input message="tns:firatIngoUserIDGonderHttpGetIn" />
+      <wsdl:output message="tns:firatIngoUserIDGonderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGonder">
+      <wsdl:input message="tns:firatIngoUserSeviyeGonderHttpGetIn" />
+      <wsdl:output message="tns:firatIngoUserSeviyeGonderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGuncelle">
+      <wsdl:input message="tns:firatIngoUserSeviyeGuncelleHttpGetIn" />
+      <wsdl:output message="tns:firatIngoUserSeviyeGuncelleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoYanlisCevapEkle">
+      <wsdl:input message="tns:FitatingoYanlisCevapEkleHttpGetIn" />
+      <wsdl:output message="tns:FitatingoYanlisCevapEkleHttpGetOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="WebService1HttpPost">
@@ -1231,6 +1609,10 @@
       <wsdl:input message="tns:anketYoneticiTumListeHttpPostIn" />
       <wsdl:output message="tns:anketYoneticiTumListeHttpPostOut" />
     </wsdl:operation>
+    <wsdl:operation name="yoneticisil">
+      <wsdl:input message="tns:yoneticisilHttpPostIn" />
+      <wsdl:output message="tns:yoneticisilHttpPostOut" />
+    </wsdl:operation>
     <wsdl:operation name="SoruGetir">
       <wsdl:input message="tns:SoruGetirHttpPostIn" />
       <wsdl:output message="tns:SoruGetirHttpPostOut" />
@@ -1238,6 +1620,38 @@
     <wsdl:operation name="soruIDgonder">
       <wsdl:input message="tns:soruIDgonderHttpPostIn" />
       <wsdl:output message="tns:soruIDgonderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonderUcSeviye">
+      <wsdl:input message="tns:soruIDgonderUcSeviyeHttpPostIn" />
+      <wsdl:output message="tns:soruIDgonderUcSeviyeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="usurAddFitatingo">
+      <wsdl:input message="tns:usurAddFitatingoHttpPostIn" />
+      <wsdl:output message="tns:usurAddFitatingoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mailKontrolEt">
+      <wsdl:input message="tns:mailKontrolEtHttpPostIn" />
+      <wsdl:output message="tns:mailKontrolEtHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoLogin">
+      <wsdl:input message="tns:firatIngoLoginHttpPostIn" />
+      <wsdl:output message="tns:firatIngoLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserIDGonder">
+      <wsdl:input message="tns:firatIngoUserIDGonderHttpPostIn" />
+      <wsdl:output message="tns:firatIngoUserIDGonderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGonder">
+      <wsdl:input message="tns:firatIngoUserSeviyeGonderHttpPostIn" />
+      <wsdl:output message="tns:firatIngoUserSeviyeGonderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGuncelle">
+      <wsdl:input message="tns:firatIngoUserSeviyeGuncelleHttpPostIn" />
+      <wsdl:output message="tns:firatIngoUserSeviyeGuncelleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoYanlisCevapEkle">
+      <wsdl:input message="tns:FitatingoYanlisCevapEkleHttpPostIn" />
+      <wsdl:output message="tns:FitatingoYanlisCevapEkleHttpPostOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -1458,6 +1872,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="yoneticisil">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/yoneticisil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SoruGetir">
       <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/SoruGetir" style="document" />
       <wsdl:input>
@@ -1469,6 +1892,78 @@
     </wsdl:operation>
     <wsdl:operation name="soruIDgonder">
       <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/soruIDgonder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonderUcSeviye">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/soruIDgonderUcSeviye" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usurAddFitatingo">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/usurAddFitatingo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mailKontrolEt">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/mailKontrolEt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoLogin">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserIDGonder">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserIDGonder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGonder">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserSeviyeGonder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGuncelle">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserSeviyeGuncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoYanlisCevapEkle">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/FitatingoYanlisCevapEkle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1695,6 +2190,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="yoneticisil">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/yoneticisil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SoruGetir">
       <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/SoruGetir" style="document" />
       <wsdl:input>
@@ -1706,6 +2210,78 @@
     </wsdl:operation>
     <wsdl:operation name="soruIDgonder">
       <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/soruIDgonder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonderUcSeviye">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/soruIDgonderUcSeviye" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usurAddFitatingo">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/usurAddFitatingo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mailKontrolEt">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/mailKontrolEt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoLogin">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserIDGonder">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserIDGonder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGonder">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserSeviyeGonder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGuncelle">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserSeviyeGuncelle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoYanlisCevapEkle">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/FitatingoYanlisCevapEkle" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1930,6 +2506,15 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="yoneticisil">
+      <http:operation location="/yoneticisil" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SoruGetir">
       <http:operation location="/SoruGetir" />
       <wsdl:input>
@@ -1941,6 +2526,78 @@
     </wsdl:operation>
     <wsdl:operation name="soruIDgonder">
       <http:operation location="/soruIDgonder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonderUcSeviye">
+      <http:operation location="/soruIDgonderUcSeviye" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usurAddFitatingo">
+      <http:operation location="/usurAddFitatingo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mailKontrolEt">
+      <http:operation location="/mailKontrolEt" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoLogin">
+      <http:operation location="/firatIngoLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserIDGonder">
+      <http:operation location="/firatIngoUserIDGonder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGonder">
+      <http:operation location="/firatIngoUserSeviyeGonder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGuncelle">
+      <http:operation location="/firatIngoUserSeviyeGuncelle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoYanlisCevapEkle">
+      <http:operation location="/FitatingoYanlisCevapEkle" />
       <wsdl:input>
         <http:urlEncoded />
       </wsdl:input>
@@ -2165,6 +2822,15 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="yoneticisil">
+      <http:operation location="/yoneticisil" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SoruGetir">
       <http:operation location="/SoruGetir" />
       <wsdl:input>
@@ -2176,6 +2842,78 @@
     </wsdl:operation>
     <wsdl:operation name="soruIDgonder">
       <http:operation location="/soruIDgonder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="soruIDgonderUcSeviye">
+      <http:operation location="/soruIDgonderUcSeviye" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="usurAddFitatingo">
+      <http:operation location="/usurAddFitatingo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mailKontrolEt">
+      <http:operation location="/mailKontrolEt" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoLogin">
+      <http:operation location="/firatIngoLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserIDGonder">
+      <http:operation location="/firatIngoUserIDGonder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGonder">
+      <http:operation location="/firatIngoUserSeviyeGonder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatIngoUserSeviyeGuncelle">
+      <http:operation location="/firatIngoUserSeviyeGuncelle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoYanlisCevapEkle">
+      <http:operation location="/FitatingoYanlisCevapEkle" />
       <wsdl:input>
         <mime:content type="application/x-www-form-urlencoded" />
       </wsdl:input>

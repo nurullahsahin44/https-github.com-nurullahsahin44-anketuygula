@@ -183,6 +183,13 @@ namespace anketUygula.WebService {
         [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/anketYoneticiTumListe", ReplyAction="*")]
         System.Threading.Tasks.Task<string> anketYoneticiTumListeAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/yoneticisil", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool yoneticisil(int yoneticiID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/yoneticisil", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> yoneticisilAsync(int yoneticiID);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/SoruGetir", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         string SoruGetir(int SoruId);
@@ -196,6 +203,62 @@ namespace anketUygula.WebService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/soruIDgonder", ReplyAction="*")]
         System.Threading.Tasks.Task<string> soruIDgonderAsync(int soruSeviye);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/soruIDgonderUcSeviye", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string soruIDgonderUcSeviye(int soruSeviye);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/soruIDgonderUcSeviye", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> soruIDgonderUcSeviyeAsync(int soruSeviye);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/usurAddFitatingo", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool usurAddFitatingo(string Adi, string Soyadi, string Email, string Parola);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/usurAddFitatingo", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> usurAddFitatingoAsync(string Adi, string Soyadi, string Email, string Parola);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/mailKontrolEt", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool mailKontrolEt(string Email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/mailKontrolEt", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> mailKontrolEtAsync(string Email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoLogin", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool firatIngoLogin(string email, string Parola);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoLogin", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> firatIngoLoginAsync(string email, string Parola);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserIDGonder", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string firatIngoUserIDGonder(string Eposta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserIDGonder", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> firatIngoUserIDGonderAsync(string Eposta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserSeviyeGonder", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string firatIngoUserSeviyeGonder(string usurID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserSeviyeGonder", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> firatIngoUserSeviyeGonderAsync(string usurID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserSeviyeGuncelle", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool firatIngoUserSeviyeGuncelle(int ID, int seviye);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/firatIngoUserSeviyeGuncelle", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> firatIngoUserSeviyeGuncelleAsync(int ID, int seviye);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/FitatingoYanlisCevapEkle", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool FitatingoYanlisCevapEkle(int user_ID, int soru_ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://service.dahafazlaoku.com/WebService1.asmx/FitatingoYanlisCevapEkle", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> FitatingoYanlisCevapEkleAsync(int user_ID, int soru_ID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -417,6 +480,14 @@ namespace anketUygula.WebService {
             return base.Channel.anketYoneticiTumListeAsync();
         }
         
+        public bool yoneticisil(int yoneticiID) {
+            return base.Channel.yoneticisil(yoneticiID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> yoneticisilAsync(int yoneticiID) {
+            return base.Channel.yoneticisilAsync(yoneticiID);
+        }
+        
         public string SoruGetir(int SoruId) {
             return base.Channel.SoruGetir(SoruId);
         }
@@ -431,6 +502,70 @@ namespace anketUygula.WebService {
         
         public System.Threading.Tasks.Task<string> soruIDgonderAsync(int soruSeviye) {
             return base.Channel.soruIDgonderAsync(soruSeviye);
+        }
+        
+        public string soruIDgonderUcSeviye(int soruSeviye) {
+            return base.Channel.soruIDgonderUcSeviye(soruSeviye);
+        }
+        
+        public System.Threading.Tasks.Task<string> soruIDgonderUcSeviyeAsync(int soruSeviye) {
+            return base.Channel.soruIDgonderUcSeviyeAsync(soruSeviye);
+        }
+        
+        public bool usurAddFitatingo(string Adi, string Soyadi, string Email, string Parola) {
+            return base.Channel.usurAddFitatingo(Adi, Soyadi, Email, Parola);
+        }
+        
+        public System.Threading.Tasks.Task<bool> usurAddFitatingoAsync(string Adi, string Soyadi, string Email, string Parola) {
+            return base.Channel.usurAddFitatingoAsync(Adi, Soyadi, Email, Parola);
+        }
+        
+        public bool mailKontrolEt(string Email) {
+            return base.Channel.mailKontrolEt(Email);
+        }
+        
+        public System.Threading.Tasks.Task<bool> mailKontrolEtAsync(string Email) {
+            return base.Channel.mailKontrolEtAsync(Email);
+        }
+        
+        public bool firatIngoLogin(string email, string Parola) {
+            return base.Channel.firatIngoLogin(email, Parola);
+        }
+        
+        public System.Threading.Tasks.Task<bool> firatIngoLoginAsync(string email, string Parola) {
+            return base.Channel.firatIngoLoginAsync(email, Parola);
+        }
+        
+        public string firatIngoUserIDGonder(string Eposta) {
+            return base.Channel.firatIngoUserIDGonder(Eposta);
+        }
+        
+        public System.Threading.Tasks.Task<string> firatIngoUserIDGonderAsync(string Eposta) {
+            return base.Channel.firatIngoUserIDGonderAsync(Eposta);
+        }
+        
+        public string firatIngoUserSeviyeGonder(string usurID) {
+            return base.Channel.firatIngoUserSeviyeGonder(usurID);
+        }
+        
+        public System.Threading.Tasks.Task<string> firatIngoUserSeviyeGonderAsync(string usurID) {
+            return base.Channel.firatIngoUserSeviyeGonderAsync(usurID);
+        }
+        
+        public bool firatIngoUserSeviyeGuncelle(int ID, int seviye) {
+            return base.Channel.firatIngoUserSeviyeGuncelle(ID, seviye);
+        }
+        
+        public System.Threading.Tasks.Task<bool> firatIngoUserSeviyeGuncelleAsync(int ID, int seviye) {
+            return base.Channel.firatIngoUserSeviyeGuncelleAsync(ID, seviye);
+        }
+        
+        public bool FitatingoYanlisCevapEkle(int user_ID, int soru_ID) {
+            return base.Channel.FitatingoYanlisCevapEkle(user_ID, soru_ID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> FitatingoYanlisCevapEkleAsync(int user_ID, int soru_ID) {
+            return base.Channel.FitatingoYanlisCevapEkleAsync(user_ID, soru_ID);
         }
     }
 }

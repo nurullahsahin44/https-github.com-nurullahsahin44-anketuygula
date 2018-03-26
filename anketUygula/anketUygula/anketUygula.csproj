@@ -171,6 +171,7 @@
     <Content Include="genel.Master" />
     <Content Include="Account\yöneticiler.aspx" />
     <Content Include="Account\yöneticigüncelle.aspx" />
+    <Content Include="Account\yöneticisil.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -375,6 +376,13 @@
     </Compile>
     <Compile Include="Account\yöneticigüncelle.aspx.designer.cs">
       <DependentUpon>yöneticigüncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\yöneticisil.aspx.cs">
+      <DependentUpon>yöneticisil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\yöneticisil.aspx.designer.cs">
+      <DependentUpon>yöneticisil.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
