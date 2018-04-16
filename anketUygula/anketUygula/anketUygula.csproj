@@ -38,6 +38,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -227,6 +233,7 @@
     </None>
     <Content Include="Account\yönetici.aspx" />
     <Content Include="Account\yayındakianketlerim.aspx" />
+    <Content Include="Account\sifremiunuttum.aspx" />
     <Content Include="yönetici.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -363,6 +370,13 @@
     <Compile Include="Account\yayındakianketlerim.aspx.designer.cs">
       <DependentUpon>yayındakianketlerim.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Account\sifremiunuttum.aspx.cs">
+      <DependentUpon>sifremiunuttum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\sifremiunuttum.aspx.designer.cs">
+      <DependentUpon>sifremiunuttum.aspx</DependentUpon>
+    </Compile>
     <Compile Include="yönetici.Master.cs">
       <DependentUpon>yönetici.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -393,6 +407,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\WebService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

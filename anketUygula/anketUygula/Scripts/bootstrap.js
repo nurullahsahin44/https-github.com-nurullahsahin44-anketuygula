@@ -61,6 +61,77 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
       }
     }
   }
+//buradan baþlýyor
+  $(document).ready(function () {
+      var i = 0;
+      var x = 1;
+      var sinir = 7;
+    //  $("#add_row").click(function () {
+          $(function () {
+              $("#soruekle").change(function () {
+                 
+                  var selectedText = $(this).find("option:selected").text();
+                  var selectedValue = $(this).val();
+                  
+                  if (selectedValue == 1 && i<sinir) {
+                      $('#addr' + i).html("<td>" + (i + 1) + "</td><td><input type='text' name='soru" + i + "'  placeholder='Soru' class='form-control'  aria-multiline='True'  /><br /><input id='secenek1' type='checkbox'/><input type='text' name='cevap1" + i + "' placeholder='1.Secenek' class='form-control'  aria-multiline='True'  /><br /><input id='secenek2' type='checkbox' /><input type='text' name='cevap2" + i + "'  placeholder='2.Secenek' class='form-control'  aria-multiline='True'  /><br /><input id='secenek3' type='checkbox' /><input type='text' name='cevap3" + i + "'  placeholder='3.Secenek' class='form-control'  aria-multiline='True'  /><br /><input id='secenek4'  type='checkbox' /><input type='text' name='cevap4" + i + "'  placeholder='4.Secenek' class='form-control'  aria-multiline='True'  /><br /></td>");
+                      //    
+                      $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+                      i++;
+                      document.getElementById("soruekle").selectedIndex = "0";
+                      //...
+                      //içine sýfýrlama yapýyor
+                   
+                      }
+                  else if (selectedValue == 2 && i < sinir) {
+                      $('#addr' + i).html("<td>" + (i + 1) + "</td><td><textarea id='paragraf" + i + "' cols='80' placeholder='Soru' name='paragraf' rows='10'></textarea> ");
+
+                      $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+                      i++;
+                    //içine sýfýrlama yapýyor
+                      document.getElementById("soruekle").selectedIndex = "0";
+                }
+                  else if (selectedValue == 3 && i < sinir) {
+                      $('#addr' + i).html("<td>" + (i + 1) + "</td><td><input type='text' name='soru" + i + "'  placeholder='Soru' class='form-control'  aria-multiline='True'  /> ");
+
+                    $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+                    i++;
+                    //içine sýfýrlama yapýyor
+                    document.getElementById("soruekle").selectedIndex = "0";
+                }
+                  else if (selectedValue == 4 && i < sinir) {
+                      $('#addr' + i).html("<td>" + (i + 1) + "</td><td> <input type='text' name='teksoru" + i + "'  placeholder='Soru' class='form-control'  aria-multiline='True'  /><br /><input id='teksecenek1'  type='radio' /><input type='text' name='tekcevap1" + i + "'  placeholder='1.Secenek' class='form-control'  aria-multiline='True'  /><br /><input id='teksecenek2'  type='radio' /><input type='text' name='tekcevap2" + i + "' placeholder='2.Secenek' class='form-control'  aria-multiline='True'  /><br /><input id='teksecenek3'  type='radio' /><input type='text' name='tekcevap3" + i + "'  placeholder='3.Secenek' class='form-control'  aria-multiline='True'  /><br /><input id='teksecenek4'  type='radio' /><input type='text' name='tekcevap4" + i + "' placeholder='4.Secenek' class='form-control'  aria-multiline='True'  /><br />");
+
+                    $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+                    i++;
+                    //içine sýfýrlama yapýyor
+                    document.getElementById("soruekle").selectedIndex = "0";
+                }
+                  else if (selectedValue == 5 && i < sinir) {
+                    $('#addr' + i).html("<td>" + (i + 1) + "</td><td> <input type='file' multiple><input type='text' name='resimsoru'" + i + "  placeholder='Resim Aciklamasi' class='form-control'  aria-multiline='True'  />");
+
+                    $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+                    i++;
+                    //içine sýfýrlama yapýyor
+                    document.getElementById("soruekle").selectedIndex = "0";
+                  }
+                  
+                  });
+          });
+          $("#delete_row").click(function () {
+              if (i > 1) {
+                  $("#addr" + (i - 1)).html('');
+                  i--;
+              }
+          });
+      });
+     
+
+ // });
+  
+    
+  
+  
 
   // http://blog.alexmaccaw.com/css-transitions
   $.fn.emulateTransitionEnd = function (duration) {

@@ -39,8 +39,8 @@
                                 <asp:Label runat="server" AssociatedControlID="RememberMe">Beni Hatırla</asp:Label>
                             </div>
                             <div>
-                   
-                                <asp:HyperLink ID="HyperLink1"  runat="server">Şifremi Unuttum</asp:HyperLink>
+                  
+                                <asp:HyperLink ID="HyperLink1" href="sifremiunuttum.aspx" runat="server">Şifremi Unuttum</asp:HyperLink>
                             </div>
                         </div>
                     </div>

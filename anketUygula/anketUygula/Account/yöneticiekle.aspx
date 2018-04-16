@@ -16,7 +16,10 @@
     ControlToValidate="yöneticiTC"
     Operator="DataTypeCheck"
     Type="Integer"
+    MaxLenght="11"
+    MinLenght="11"
     ErrorMessage="11 karakterli TC kimlik no giriniz.." TabIndex="0">11 karakterli TC kimlik no giriniz..</asp:CompareValidator>
+                    <asp:Label ID="Label11" runat="server" Text="Label" Visible="False"></asp:Label>
                 </td>
                 <td style="width: 117px">
            
@@ -25,7 +28,7 @@
                 </td>
                 <td>
            
-        <asp:TextBox ID="yöneticiTC" runat="server" MaxLength="11" Rows="11"></asp:TextBox>
+        <asp:TextBox ID="yöneticiTC" runat="server" MinLenght="11" MaxLength="11" Rows="11"></asp:TextBox>
            
                 </td>
             </tr>
@@ -37,6 +40,15 @@
                 </td>
                 <td>
         <asp:TextBox ID="yöneticiSifre" runat="server" CssClass="col-md-offset-0" TextMode="Password"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <asp:Label ID="Label12" runat="server" Text="Yönetici Şifre Tekrar :"></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="yoneticisifre2" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>

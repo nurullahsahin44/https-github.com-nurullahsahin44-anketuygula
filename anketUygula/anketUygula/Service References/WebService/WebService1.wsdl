@@ -317,6 +317,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="anketYoneticiID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KullaniciAdi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anketYoneticiIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="anketYoneticiIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="anketAdminLogin">
         <s:complexType>
           <s:sequence>
@@ -352,6 +366,22 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="anketMobilAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yoneticiid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="anketBaslik" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tarih" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anketMobilAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="anketMobilAddResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="anketYoneticiTumListe">
         <s:complexType />
       </s:element>
@@ -376,6 +406,67 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="anketID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="KulID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anketIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="anketIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SifremiUnuttum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SifremiUnuttumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SifremiUnuttumResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnketKullaniciGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnketKullaniciGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnketKullaniciGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnketKullaniciGuncelle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="kullaniciID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Adi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Soyadi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sifre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefon" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnketKullaniciGuncelleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AnketKullaniciGuncelleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="SoruGetir">
         <s:complexType>
           <s:sequence>
@@ -394,6 +485,7 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="soruSeviye" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -522,8 +614,40 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="firatingouserGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="firatingouserGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="firatingouserGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FitatingoUserGuncelle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Adi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Soyadi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parola" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FitatingoUserGuncelleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FitatingoUserGuncelleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="string" nillable="true" type="s:string" />
       <s:element name="boolean" type="s:boolean" />
+      <s:element name="int" type="s:int" />
     </s:schema>
   </wsdl:types>
   <wsdl:message name="userSorgulaSoapIn">
@@ -652,6 +776,12 @@
   <wsdl:message name="anketLoginSoapOut">
     <wsdl:part name="parameters" element="tns:anketLoginResponse" />
   </wsdl:message>
+  <wsdl:message name="anketYoneticiIDSoapIn">
+    <wsdl:part name="parameters" element="tns:anketYoneticiID" />
+  </wsdl:message>
+  <wsdl:message name="anketYoneticiIDSoapOut">
+    <wsdl:part name="parameters" element="tns:anketYoneticiIDResponse" />
+  </wsdl:message>
   <wsdl:message name="anketAdminLoginSoapIn">
     <wsdl:part name="parameters" element="tns:anketAdminLogin" />
   </wsdl:message>
@@ -664,6 +794,12 @@
   <wsdl:message name="anketWebYoneticiAddSoapOut">
     <wsdl:part name="parameters" element="tns:anketWebYoneticiAddResponse" />
   </wsdl:message>
+  <wsdl:message name="anketMobilAddSoapIn">
+    <wsdl:part name="parameters" element="tns:anketMobilAdd" />
+  </wsdl:message>
+  <wsdl:message name="anketMobilAddSoapOut">
+    <wsdl:part name="parameters" element="tns:anketMobilAddResponse" />
+  </wsdl:message>
   <wsdl:message name="anketYoneticiTumListeSoapIn">
     <wsdl:part name="parameters" element="tns:anketYoneticiTumListe" />
   </wsdl:message>
@@ -675,6 +811,30 @@
   </wsdl:message>
   <wsdl:message name="yoneticisilSoapOut">
     <wsdl:part name="parameters" element="tns:yoneticisilResponse" />
+  </wsdl:message>
+  <wsdl:message name="anketIDSoapIn">
+    <wsdl:part name="parameters" element="tns:anketID" />
+  </wsdl:message>
+  <wsdl:message name="anketIDSoapOut">
+    <wsdl:part name="parameters" element="tns:anketIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SifremiUnuttumSoapIn">
+    <wsdl:part name="parameters" element="tns:SifremiUnuttum" />
+  </wsdl:message>
+  <wsdl:message name="SifremiUnuttumSoapOut">
+    <wsdl:part name="parameters" element="tns:SifremiUnuttumResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:AnketKullaniciGetir" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:AnketKullaniciGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGuncelleSoapIn">
+    <wsdl:part name="parameters" element="tns:AnketKullaniciGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGuncelleSoapOut">
+    <wsdl:part name="parameters" element="tns:AnketKullaniciGuncelleResponse" />
   </wsdl:message>
   <wsdl:message name="SoruGetirSoapIn">
     <wsdl:part name="parameters" element="tns:SoruGetir" />
@@ -735,6 +895,18 @@
   </wsdl:message>
   <wsdl:message name="FitatingoYanlisCevapEkleSoapOut">
     <wsdl:part name="parameters" element="tns:FitatingoYanlisCevapEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="firatingouserGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:firatingouserGetir" />
+  </wsdl:message>
+  <wsdl:message name="firatingouserGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:firatingouserGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoUserGuncelleSoapIn">
+    <wsdl:part name="parameters" element="tns:FitatingoUserGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoUserGuncelleSoapOut">
+    <wsdl:part name="parameters" element="tns:FitatingoUserGuncelleResponse" />
   </wsdl:message>
   <wsdl:message name="userSorgulaHttpGetIn">
     <wsdl:part name="Eposta" type="s:string" />
@@ -887,6 +1059,12 @@
   <wsdl:message name="anketLoginHttpGetOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
+  <wsdl:message name="anketYoneticiIDHttpGetIn">
+    <wsdl:part name="KullaniciAdi" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketYoneticiIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
   <wsdl:message name="anketAdminLoginHttpGetIn">
     <wsdl:part name="KullaniciAdi" type="s:string" />
     <wsdl:part name="Parola" type="s:string" />
@@ -906,6 +1084,14 @@
   <wsdl:message name="anketWebYoneticiAddHttpGetOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
+  <wsdl:message name="anketMobilAddHttpGetIn">
+    <wsdl:part name="yoneticiid" type="s:string" />
+    <wsdl:part name="anketBaslik" type="s:string" />
+    <wsdl:part name="tarih" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketMobilAddHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
   <wsdl:message name="anketYoneticiTumListeHttpGetIn" />
   <wsdl:message name="anketYoneticiTumListeHttpGetOut">
     <wsdl:part name="Body" element="tns:string" />
@@ -916,6 +1102,35 @@
   <wsdl:message name="yoneticisilHttpGetOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
+  <wsdl:message name="anketIDHttpGetIn">
+    <wsdl:part name="KulID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SifremiUnuttumHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SifremiUnuttumHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGetirHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGetirHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGuncelleHttpGetIn">
+    <wsdl:part name="kullaniciID" type="s:string" />
+    <wsdl:part name="Adi" type="s:string" />
+    <wsdl:part name="Soyadi" type="s:string" />
+    <wsdl:part name="Sifre" type="s:string" />
+    <wsdl:part name="Mail" type="s:string" />
+    <wsdl:part name="Telefon" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGuncelleHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
   <wsdl:message name="SoruGetirHttpGetIn">
     <wsdl:part name="SoruId" type="s:string" />
   </wsdl:message>
@@ -924,6 +1139,7 @@
   </wsdl:message>
   <wsdl:message name="soruIDgonderHttpGetIn">
     <wsdl:part name="soruSeviye" type="s:string" />
+    <wsdl:part name="userID" type="s:string" />
   </wsdl:message>
   <wsdl:message name="soruIDgonderHttpGetOut">
     <wsdl:part name="Body" element="tns:string" />
@@ -980,6 +1196,21 @@
     <wsdl:part name="soru_ID" type="s:string" />
   </wsdl:message>
   <wsdl:message name="FitatingoYanlisCevapEkleHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="firatingouserGetirHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="firatingouserGetirHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoUserGuncelleHttpGetIn">
+    <wsdl:part name="userID" type="s:string" />
+    <wsdl:part name="Adi" type="s:string" />
+    <wsdl:part name="Soyadi" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoUserGuncelleHttpGetOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
   <wsdl:message name="userSorgulaHttpPostIn">
@@ -1133,6 +1364,12 @@
   <wsdl:message name="anketLoginHttpPostOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
+  <wsdl:message name="anketYoneticiIDHttpPostIn">
+    <wsdl:part name="KullaniciAdi" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketYoneticiIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
   <wsdl:message name="anketAdminLoginHttpPostIn">
     <wsdl:part name="KullaniciAdi" type="s:string" />
     <wsdl:part name="Parola" type="s:string" />
@@ -1152,6 +1389,14 @@
   <wsdl:message name="anketWebYoneticiAddHttpPostOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
+  <wsdl:message name="anketMobilAddHttpPostIn">
+    <wsdl:part name="yoneticiid" type="s:string" />
+    <wsdl:part name="anketBaslik" type="s:string" />
+    <wsdl:part name="tarih" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketMobilAddHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
   <wsdl:message name="anketYoneticiTumListeHttpPostIn" />
   <wsdl:message name="anketYoneticiTumListeHttpPostOut">
     <wsdl:part name="Body" element="tns:string" />
@@ -1162,6 +1407,35 @@
   <wsdl:message name="yoneticisilHttpPostOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
+  <wsdl:message name="anketIDHttpPostIn">
+    <wsdl:part name="KulID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="anketIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SifremiUnuttumHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SifremiUnuttumHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGetirHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGetirHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGuncelleHttpPostIn">
+    <wsdl:part name="kullaniciID" type="s:string" />
+    <wsdl:part name="Adi" type="s:string" />
+    <wsdl:part name="Soyadi" type="s:string" />
+    <wsdl:part name="Sifre" type="s:string" />
+    <wsdl:part name="Mail" type="s:string" />
+    <wsdl:part name="Telefon" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnketKullaniciGuncelleHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
   <wsdl:message name="SoruGetirHttpPostIn">
     <wsdl:part name="SoruId" type="s:string" />
   </wsdl:message>
@@ -1170,6 +1444,7 @@
   </wsdl:message>
   <wsdl:message name="soruIDgonderHttpPostIn">
     <wsdl:part name="soruSeviye" type="s:string" />
+    <wsdl:part name="userID" type="s:string" />
   </wsdl:message>
   <wsdl:message name="soruIDgonderHttpPostOut">
     <wsdl:part name="Body" element="tns:string" />
@@ -1226,6 +1501,21 @@
     <wsdl:part name="soru_ID" type="s:string" />
   </wsdl:message>
   <wsdl:message name="FitatingoYanlisCevapEkleHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="firatingouserGetirHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="firatingouserGetirHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoUserGuncelleHttpPostIn">
+    <wsdl:part name="userID" type="s:string" />
+    <wsdl:part name="Adi" type="s:string" />
+    <wsdl:part name="Soyadi" type="s:string" />
+    <wsdl:part name="Parola" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FitatingoUserGuncelleHttpPostOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
   <wsdl:portType name="WebService1Soap">
@@ -1313,6 +1603,10 @@
       <wsdl:input message="tns:anketLoginSoapIn" />
       <wsdl:output message="tns:anketLoginSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="anketYoneticiID">
+      <wsdl:input message="tns:anketYoneticiIDSoapIn" />
+      <wsdl:output message="tns:anketYoneticiIDSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="anketAdminLogin">
       <wsdl:input message="tns:anketAdminLoginSoapIn" />
       <wsdl:output message="tns:anketAdminLoginSoapOut" />
@@ -1321,6 +1615,10 @@
       <wsdl:input message="tns:anketWebYoneticiAddSoapIn" />
       <wsdl:output message="tns:anketWebYoneticiAddSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="anketMobilAdd">
+      <wsdl:input message="tns:anketMobilAddSoapIn" />
+      <wsdl:output message="tns:anketMobilAddSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="anketYoneticiTumListe">
       <wsdl:input message="tns:anketYoneticiTumListeSoapIn" />
       <wsdl:output message="tns:anketYoneticiTumListeSoapOut" />
@@ -1328,6 +1626,22 @@
     <wsdl:operation name="yoneticisil">
       <wsdl:input message="tns:yoneticisilSoapIn" />
       <wsdl:output message="tns:yoneticisilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketID">
+      <wsdl:input message="tns:anketIDSoapIn" />
+      <wsdl:output message="tns:anketIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SifremiUnuttum">
+      <wsdl:input message="tns:SifremiUnuttumSoapIn" />
+      <wsdl:output message="tns:SifremiUnuttumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGetir">
+      <wsdl:input message="tns:AnketKullaniciGetirSoapIn" />
+      <wsdl:output message="tns:AnketKullaniciGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGuncelle">
+      <wsdl:input message="tns:AnketKullaniciGuncelleSoapIn" />
+      <wsdl:output message="tns:AnketKullaniciGuncelleSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="SoruGetir">
       <wsdl:input message="tns:SoruGetirSoapIn" />
@@ -1368,6 +1682,14 @@
     <wsdl:operation name="FitatingoYanlisCevapEkle">
       <wsdl:input message="tns:FitatingoYanlisCevapEkleSoapIn" />
       <wsdl:output message="tns:FitatingoYanlisCevapEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatingouserGetir">
+      <wsdl:input message="tns:firatingouserGetirSoapIn" />
+      <wsdl:output message="tns:firatingouserGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoUserGuncelle">
+      <wsdl:input message="tns:FitatingoUserGuncelleSoapIn" />
+      <wsdl:output message="tns:FitatingoUserGuncelleSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="WebService1HttpGet">
@@ -1455,6 +1777,10 @@
       <wsdl:input message="tns:anketLoginHttpGetIn" />
       <wsdl:output message="tns:anketLoginHttpGetOut" />
     </wsdl:operation>
+    <wsdl:operation name="anketYoneticiID">
+      <wsdl:input message="tns:anketYoneticiIDHttpGetIn" />
+      <wsdl:output message="tns:anketYoneticiIDHttpGetOut" />
+    </wsdl:operation>
     <wsdl:operation name="anketAdminLogin">
       <wsdl:input message="tns:anketAdminLoginHttpGetIn" />
       <wsdl:output message="tns:anketAdminLoginHttpGetOut" />
@@ -1463,6 +1789,10 @@
       <wsdl:input message="tns:anketWebYoneticiAddHttpGetIn" />
       <wsdl:output message="tns:anketWebYoneticiAddHttpGetOut" />
     </wsdl:operation>
+    <wsdl:operation name="anketMobilAdd">
+      <wsdl:input message="tns:anketMobilAddHttpGetIn" />
+      <wsdl:output message="tns:anketMobilAddHttpGetOut" />
+    </wsdl:operation>
     <wsdl:operation name="anketYoneticiTumListe">
       <wsdl:input message="tns:anketYoneticiTumListeHttpGetIn" />
       <wsdl:output message="tns:anketYoneticiTumListeHttpGetOut" />
@@ -1470,6 +1800,22 @@
     <wsdl:operation name="yoneticisil">
       <wsdl:input message="tns:yoneticisilHttpGetIn" />
       <wsdl:output message="tns:yoneticisilHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketID">
+      <wsdl:input message="tns:anketIDHttpGetIn" />
+      <wsdl:output message="tns:anketIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SifremiUnuttum">
+      <wsdl:input message="tns:SifremiUnuttumHttpGetIn" />
+      <wsdl:output message="tns:SifremiUnuttumHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGetir">
+      <wsdl:input message="tns:AnketKullaniciGetirHttpGetIn" />
+      <wsdl:output message="tns:AnketKullaniciGetirHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGuncelle">
+      <wsdl:input message="tns:AnketKullaniciGuncelleHttpGetIn" />
+      <wsdl:output message="tns:AnketKullaniciGuncelleHttpGetOut" />
     </wsdl:operation>
     <wsdl:operation name="SoruGetir">
       <wsdl:input message="tns:SoruGetirHttpGetIn" />
@@ -1510,6 +1856,14 @@
     <wsdl:operation name="FitatingoYanlisCevapEkle">
       <wsdl:input message="tns:FitatingoYanlisCevapEkleHttpGetIn" />
       <wsdl:output message="tns:FitatingoYanlisCevapEkleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatingouserGetir">
+      <wsdl:input message="tns:firatingouserGetirHttpGetIn" />
+      <wsdl:output message="tns:firatingouserGetirHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoUserGuncelle">
+      <wsdl:input message="tns:FitatingoUserGuncelleHttpGetIn" />
+      <wsdl:output message="tns:FitatingoUserGuncelleHttpGetOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="WebService1HttpPost">
@@ -1597,6 +1951,10 @@
       <wsdl:input message="tns:anketLoginHttpPostIn" />
       <wsdl:output message="tns:anketLoginHttpPostOut" />
     </wsdl:operation>
+    <wsdl:operation name="anketYoneticiID">
+      <wsdl:input message="tns:anketYoneticiIDHttpPostIn" />
+      <wsdl:output message="tns:anketYoneticiIDHttpPostOut" />
+    </wsdl:operation>
     <wsdl:operation name="anketAdminLogin">
       <wsdl:input message="tns:anketAdminLoginHttpPostIn" />
       <wsdl:output message="tns:anketAdminLoginHttpPostOut" />
@@ -1605,6 +1963,10 @@
       <wsdl:input message="tns:anketWebYoneticiAddHttpPostIn" />
       <wsdl:output message="tns:anketWebYoneticiAddHttpPostOut" />
     </wsdl:operation>
+    <wsdl:operation name="anketMobilAdd">
+      <wsdl:input message="tns:anketMobilAddHttpPostIn" />
+      <wsdl:output message="tns:anketMobilAddHttpPostOut" />
+    </wsdl:operation>
     <wsdl:operation name="anketYoneticiTumListe">
       <wsdl:input message="tns:anketYoneticiTumListeHttpPostIn" />
       <wsdl:output message="tns:anketYoneticiTumListeHttpPostOut" />
@@ -1612,6 +1974,22 @@
     <wsdl:operation name="yoneticisil">
       <wsdl:input message="tns:yoneticisilHttpPostIn" />
       <wsdl:output message="tns:yoneticisilHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="anketID">
+      <wsdl:input message="tns:anketIDHttpPostIn" />
+      <wsdl:output message="tns:anketIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SifremiUnuttum">
+      <wsdl:input message="tns:SifremiUnuttumHttpPostIn" />
+      <wsdl:output message="tns:SifremiUnuttumHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGetir">
+      <wsdl:input message="tns:AnketKullaniciGetirHttpPostIn" />
+      <wsdl:output message="tns:AnketKullaniciGetirHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGuncelle">
+      <wsdl:input message="tns:AnketKullaniciGuncelleHttpPostIn" />
+      <wsdl:output message="tns:AnketKullaniciGuncelleHttpPostOut" />
     </wsdl:operation>
     <wsdl:operation name="SoruGetir">
       <wsdl:input message="tns:SoruGetirHttpPostIn" />
@@ -1652,6 +2030,14 @@
     <wsdl:operation name="FitatingoYanlisCevapEkle">
       <wsdl:input message="tns:FitatingoYanlisCevapEkleHttpPostIn" />
       <wsdl:output message="tns:FitatingoYanlisCevapEkleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="firatingouserGetir">
+      <wsdl:input message="tns:firatingouserGetirHttpPostIn" />
+      <wsdl:output message="tns:firatingouserGetirHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoUserGuncelle">
+      <wsdl:input message="tns:FitatingoUserGuncelleHttpPostIn" />
+      <wsdl:output message="tns:FitatingoUserGuncelleHttpPostOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -1845,6 +2231,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="anketYoneticiID">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketYoneticiID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="anketAdminLogin">
       <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketAdminLogin" style="document" />
       <wsdl:input>
@@ -1863,6 +2258,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="anketMobilAdd">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketMobilAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="anketYoneticiTumListe">
       <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketYoneticiTumListe" style="document" />
       <wsdl:input>
@@ -1874,6 +2278,42 @@
     </wsdl:operation>
     <wsdl:operation name="yoneticisil">
       <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/yoneticisil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketID">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SifremiUnuttum">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/SifremiUnuttum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGetir">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/AnketKullaniciGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGuncelle">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/AnketKullaniciGuncelle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1964,6 +2404,24 @@
     </wsdl:operation>
     <wsdl:operation name="FitatingoYanlisCevapEkle">
       <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/FitatingoYanlisCevapEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatingouserGetir">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/firatingouserGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoUserGuncelle">
+      <soap:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/FitatingoUserGuncelle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2163,6 +2621,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="anketYoneticiID">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketYoneticiID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="anketAdminLogin">
       <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketAdminLogin" style="document" />
       <wsdl:input>
@@ -2181,6 +2648,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="anketMobilAdd">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketMobilAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="anketYoneticiTumListe">
       <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketYoneticiTumListe" style="document" />
       <wsdl:input>
@@ -2192,6 +2668,42 @@
     </wsdl:operation>
     <wsdl:operation name="yoneticisil">
       <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/yoneticisil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketID">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/anketID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SifremiUnuttum">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/SifremiUnuttum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGetir">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/AnketKullaniciGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGuncelle">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/AnketKullaniciGuncelle" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2282,6 +2794,24 @@
     </wsdl:operation>
     <wsdl:operation name="FitatingoYanlisCevapEkle">
       <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/FitatingoYanlisCevapEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatingouserGetir">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/firatingouserGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoUserGuncelle">
+      <soap12:operation soapAction="http://service.dahafazlaoku.com/WebService1.asmx/FitatingoUserGuncelle" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2479,6 +3009,15 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="anketYoneticiID">
+      <http:operation location="/anketYoneticiID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="anketAdminLogin">
       <http:operation location="/anketAdminLogin" />
       <wsdl:input>
@@ -2497,6 +3036,15 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="anketMobilAdd">
+      <http:operation location="/anketMobilAdd" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="anketYoneticiTumListe">
       <http:operation location="/anketYoneticiTumListe" />
       <wsdl:input>
@@ -2508,6 +3056,42 @@
     </wsdl:operation>
     <wsdl:operation name="yoneticisil">
       <http:operation location="/yoneticisil" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketID">
+      <http:operation location="/anketID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SifremiUnuttum">
+      <http:operation location="/SifremiUnuttum" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGetir">
+      <http:operation location="/AnketKullaniciGetir" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGuncelle">
+      <http:operation location="/AnketKullaniciGuncelle" />
       <wsdl:input>
         <http:urlEncoded />
       </wsdl:input>
@@ -2598,6 +3182,24 @@
     </wsdl:operation>
     <wsdl:operation name="FitatingoYanlisCevapEkle">
       <http:operation location="/FitatingoYanlisCevapEkle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatingouserGetir">
+      <http:operation location="/firatingouserGetir" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoUserGuncelle">
+      <http:operation location="/FitatingoUserGuncelle" />
       <wsdl:input>
         <http:urlEncoded />
       </wsdl:input>
@@ -2795,6 +3397,15 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="anketYoneticiID">
+      <http:operation location="/anketYoneticiID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="anketAdminLogin">
       <http:operation location="/anketAdminLogin" />
       <wsdl:input>
@@ -2813,6 +3424,15 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="anketMobilAdd">
+      <http:operation location="/anketMobilAdd" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="anketYoneticiTumListe">
       <http:operation location="/anketYoneticiTumListe" />
       <wsdl:input>
@@ -2824,6 +3444,42 @@
     </wsdl:operation>
     <wsdl:operation name="yoneticisil">
       <http:operation location="/yoneticisil" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anketID">
+      <http:operation location="/anketID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SifremiUnuttum">
+      <http:operation location="/SifremiUnuttum" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGetir">
+      <http:operation location="/AnketKullaniciGetir" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnketKullaniciGuncelle">
+      <http:operation location="/AnketKullaniciGuncelle" />
       <wsdl:input>
         <mime:content type="application/x-www-form-urlencoded" />
       </wsdl:input>
@@ -2914,6 +3570,24 @@
     </wsdl:operation>
     <wsdl:operation name="FitatingoYanlisCevapEkle">
       <http:operation location="/FitatingoYanlisCevapEkle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="firatingouserGetir">
+      <http:operation location="/firatingouserGetir" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FitatingoUserGuncelle">
+      <http:operation location="/FitatingoUserGuncelle" />
       <wsdl:input>
         <mime:content type="application/x-www-form-urlencoded" />
       </wsdl:input>

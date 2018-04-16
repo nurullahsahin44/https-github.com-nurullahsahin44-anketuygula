@@ -10,7 +10,16 @@
 namespace anketUygula {
     
     
-    public partial class anket1 {
+    public partial class WebForm1 {
+        
+        /// <summary>
+        /// sifremiunutttummail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox sifremiunutttummail;
         
         /// <summary>
         /// Label1 control.
@@ -22,39 +31,12 @@ namespace anketUygula {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Label6 control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
-        
-        /// <summary>
-        /// Calendar2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar2;
-        
-        /// <summary>
-        /// labeltarih control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labeltarih;
-        
-        /// <summary>
-        /// anketkaydet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button anketkaydet;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
